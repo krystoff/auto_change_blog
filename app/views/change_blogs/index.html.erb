@@ -1,0 +1,31 @@
+<h1>Listing change_blogs</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Datetime</th>
+    <th>User</th>
+    <th>Location</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @change_blogs.each do |change_blog| %>
+  <tr>
+    <td><%= change_blog.title %></td>
+    <td><%= change_blog.datetime %></td>
+    <td><%= change_blog.user %></td>
+    <td><%= change_blog.location %></td>
+    <td><%= change_blog.body %></td>
+    <td><%= link_to 'Show', change_blog %></td>
+    <td><%= link_to 'Edit', edit_change_blog_path(change_blog) %></td>
+    <td><%= link_to 'Destroy', change_blog, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Change blog', new_change_blog_path %>

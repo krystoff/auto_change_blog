@@ -1,7 +1,7 @@
 AutoChangeBlog::Application.routes.draw do
-  resources :change_blogs
-
   devise_for :users
+
+  resources :change_blogs
 
   devise_for :tp_auths
 
